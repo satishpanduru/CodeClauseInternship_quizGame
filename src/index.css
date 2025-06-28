@@ -1,13 +1,112 @@
-body {
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Quiz Container */
+.quiz-box {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.quiz-box h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+}
+
+/* Timer */
+.timer {
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+/* Options */
+.options button {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  background: #f2f2f2;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.options button:hover {
+  background: #e0e0e0;
+}
+
+/* Answer Feedback */
+.correct {
+  background-color: #4caf50 !important;
+  color: white !important;
+  border-color: #388e3c !important;
+}
+
+.wrong {
+  background-color: #f44336 !important;
+  color: white !important;
+  border-color: #d32f2f !important;
+}
+
+.options button:disabled {
+  cursor: default;
+  opacity: 0.9;
+}
+
+/* Next/Restart Buttons */
+.next-btn,
+.result button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.next-btn:hover,
+.result button:hover {
+  background-color: #0b7dda;
+}
+
+/* Result */
+.result {
+  text-align: center;
+}
+
+.result h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 20px;
 }
