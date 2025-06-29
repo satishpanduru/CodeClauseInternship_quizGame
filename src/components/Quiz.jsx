@@ -7,7 +7,7 @@ const Quiz = () => {
   const [showResult, setShowResult] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const [isAnswered, setIsAnswered] = useState(false);
-  const [timer, setTimer] = useState(15); // 15 seconds per question
+  const [timer, setTimer] = useState(15);
 
   useEffect(() => {
     let countdown;
@@ -17,7 +17,7 @@ const Quiz = () => {
         setTimer((prev) => {
           if (prev === 1) {
             clearInterval(countdown);
-            setIsAnswered(true); // mark as answered even if not clicked
+            setIsAnswered(true); 
             return 0;
           }
           return prev - 1;
@@ -44,7 +44,7 @@ const Quiz = () => {
       setCurrent(current + 1);
       setSelectedAnswer('');
       setIsAnswered(false);
-      setTimer(15); // reset timer
+      setTimer(15); 
     } else {
       setShowResult(true);
     }
